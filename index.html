@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>CRUD demo js</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container">
+    <div class="mensaje-alerta"></div>
+
+    <div class="jumbotron row">
+        <h2> Finca Secbi <small>Gestión de vacas</small></h2>
+
+        <div class="col-md-6">
+            <hr>
+            <p class="modo"> <span class="glyphicon glyphicon-plus"></span> Agregar vaca</p>
+            <form id="vacas-form">
+                <input class="form-control" type="text" id="nombre" placeholder="Nombre" required>
+                <input class="form-control" type="email" id="correo" placeholder="Correo de la vaca" required>
+                <input class="form-control" type="number" id="peso" placeholder="Peso en kg" required>
+                <input class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+                <input class="form-control" type="text" id="pelaje" placeholder="Pelaje" required> <!-- Campo de pelaje -->
+                <input class="form-control" type="text" id="buscar" placeholder="Buscar vaca por nombre" onkeyup="BuscarVaca()">
+                <br>
+                <input type="submit" class="btn btn-success" value=" Guardar">
+            </form>
+            <br>
+            <br>
+            <div id="numeroVacas"></div>
+        </div>
+
+        <div class="col-md-6">
+            <img style="width:100%" src="vaca.jpg" alt="Imagen de vaca" />
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <table class="table" id="dbVacas-list"></table>
+
+    <script type="text/javascript" src="funciones.js"></script>
+</body>
+</html>
