@@ -28,6 +28,7 @@ function AgregarVaca() {
         Correo: $("#correo").val(),
         Peso: $("#peso").val(),
         Fecha_nacimiento: $("#fecha_nacimiento").val(),
+        Edad: $("#edad").val(),
         Pelaje: $("#pelaje").val() // Agregar el campo pelaje
     });
 
@@ -48,6 +49,7 @@ function ListarVacas() {
         "<th> Correo </th>" +
         "<th> Peso </th>" +
         "<th> Fecha Nacimiento </th>" +
+        "<th> Edad </th>" +
         "<th> Pelaje </th>" +
         "<th> Información </th>" +
         "<th> </th>" +
@@ -92,6 +94,7 @@ function ListarVacas() {
         $("#correo").val(vacaItem.Correo);
         $("#peso").val(vacaItem.Peso);
         $("#fecha_nacimiento").val(vacaItem.Fecha_nacimiento);
+        $("#edad").val(vacaItem.Edad);
         $("#pelaje").val(vacaItem.Pelaje); // Llenar el campo pelaje
         $("#nombre").focus();
     });
@@ -104,6 +107,7 @@ function MostrarInformacion(index) {
         "Correo: " + vacaItem.Correo + "\n" +
         "Peso: " + vacaItem.Peso + " kg\n" +
         "Fecha de Nacimiento: " + vacaItem.Fecha_nacimiento + "\n" +
+          "Edad: " + vacaItem.Edad + " años\n" +
         "Pelaje: " + vacaItem.Pelaje); // Mostrar pelaje
 }
 
@@ -118,6 +122,7 @@ function LimpiarFormulario() {
     $("#correo").val('');
     $("#peso").val('');
     $("#fecha_nacimiento").val('');
+    $("#edad").val('');
     $("#pelaje").val(''); // Limpiar el campo pelaje
 }
 
