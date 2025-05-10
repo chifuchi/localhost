@@ -69,6 +69,7 @@ function ListarVacas() {
             "<td>" + d.Correo + "</td>" +
             "<td>" + d.Peso + "</td>" +
             "<td>" + d.Fecha_nacimiento + "</td>" +
+            "<td>" + d.Edad + "</td>" +
             "<td>" + d.Pelaje + "</td>" + // Mostrar pelaje
             "<td> <a href='#' onclick='MostrarInformacion(" + i + ")'>Ver Info</a> </td>" +
             "<td> <a id='" + i + "' class='btnEditar' href='#'> <span class='glyphicon glyphicon-pencil'> </span>  </a> </td>" +
