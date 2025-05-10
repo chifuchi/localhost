@@ -2,35 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CRUD demo js</title>
-    
-    <!-- Cambia HTTP a HTTPS para evitar problemas de contenido mixto -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Mantener los nombres originales de los archivos CSS -->
     <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<head>
     <link rel="stylesheet" href="styles.css">
-    
-    <style>
-        /* Estilos adicionales para garantizar que los mensajes de alerta se muestren correctamente */
-        .mensaje-alerta {
-            position: fixed;
-            top: 70px;
-            right: 10px;
-            z-index: 9999;
-            width: 300px;
-        }
-    </style>
 </head>
 <body>
-    <!-- Navegación -->
+
     <nav class="menu-global">
         <div class="menu-container">
             <div class="menu-logo">
                 <a href="index.html">
-                    <img src="Logo.png" alt="Logo">
+                    <img src="/api/placeholder/80/40" alt="Logo">
                 </a>
             </div>
             
@@ -41,67 +27,55 @@
             </div>
             
             <div class="menu-items">
-                 <a href="https://chifuchi.github.io/inicio/" class="menu-item home-button">INICIO</a>
-                <a href="https://chifuchi.github.io/paginaweb0/" class="menu-item">PAGINA 1</a>
-                <a href="https://chifuchi.github.io/paginaminimalista/" class="menu-item">PAGINA 2</a>
-                <a href="https://chifuchi.github.io/pagina-web-con-boostrap/" class="menu-item">PAGINA 3</a>
-                <a href="https://chifuchi.github.io/pagina-web-minimalista/" class="menu-item">PAGINA 4</a>
-                <a href="https://chifuchi.github.io/localhost/" class="menu-item">LOCALHOST</a>
+                <a href="index.html" class="menu-item home-button">INICIO</a>
+                <a href="PAGINA WEB DESDE CERO/index.html" class="menu-item">PAGINA 1</a>
+                <a href="pagina-web-minimalista-main/index.html" class="menu-item">PAGINA 2</a>
+                <a href="youtube-bootstrap-parte-VI-master/index.html" class="menu-item">PAGINA 3</a>
+                <a href="alexcgdesign.github.io-main/index.html" class="menu-item">PAGINA 4</a>
+                <a href="localhost/index.html" class="menu-item">LOCALHOST</a>
                 <a href="curriculum/index.html" class="menu-item">CURRICULUM</a>
             </div>
         </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <div class="container">
-        <div class="mensaje-alerta"></div>
+    <script src="script.js"></script>
 
-        <div class="jumbotron row">
-            <h2> Finca Secbi <small>Gestión de vacas</small></h2>
+</body>
+<body class="container">
+    <div class="mensaje-alerta"></div>
 
-            <div class="col-md-6">
-                <hr>
-                <p class="modo"> <span class="glyphicon glyphicon-plus"></span> Agregar vaca</p>
-                <form id="vacas-form">
-                    <input class="form-control" type="text" id="nombre" placeholder="Nombre" required>
-                    <input class="form-control" type="email" id="correo" placeholder="Correo de la vaca" required>
-                    <input class="form-control" type="number" id="peso" placeholder="Peso en kg" required>
-                    <input class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
-                    <input class="form-control" type="text" id="pelaje" placeholder="Pelaje" required>
-                    <br>
-                    <input type="submit" class="btn btn-success" value="Guardar">
-                    <br>
-                    <input class="form-control" type="text" id="buscar" placeholder="Buscar vaca por nombre" onkeyup="BuscarVaca()">
-                </form>
+    <div class="jumbotron row">
+        <h2> Finca Secbi <small>Gestión de vacas</small></h2>
+
+        <div class="col-md-6">
+            <hr>
+            <p class="modo"> <span class="glyphicon glyphicon-plus"></span> Agregar vaca</p>
+            <form id="vacas-form">
+                <input class="form-control" type="text" id="nombre" placeholder="Nombre" required>
+                <input class="form-control" type="email" id="correo" placeholder="Correo de la vaca" required>
+                <input class="form-control" type="number" id="peso" placeholder="Peso en kg" required>
+                <input class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+                <input class="form-control" type="text" id="pelaje" placeholder="Pelaje" required> <!-- Campo de pelaje -->
+              
                 <br>
-                <br>
-                <div id="numeroVacas"></div>
-            </div>
-
-            <div class="col-md-6">
-                <!-- Usa placeholder en lugar de vaca.jpg que podría no estar disponible -->
-                <img style="width:100%" src="vaca.jpg" alt="Imagen de vaca" />
-                <!-- Si tienes la imagen en tu repositorio, usa esta línea en su lugar: -->
-                <!-- <img style="width:100%" src="vaca.jpg" alt="Imagen de vaca" /> -->
-            </div>
+                <input type="submit" class="btn btn-success" value=" Guardar"></br>
+		<br>
+		<input class="form-control" type="text" id="buscar" placeholder="Buscar vaca por nombre" onkeyup="BuscarVaca()"></br>
+            </form>
+            <br>
+            <br>
+            <div id="numeroVacas"></div>
         </div>
 
-        <br>
-        <br>
-        <table class="table" id="dbVacas-list"></table>
+        <div class="col-md-6">
+            <img style="width:100%" src="vaca.jpg" alt="Imagen de vaca" />
+        </div>
     </div>
 
-    <!-- Scripts (mantener los nombres originales) -->
-    <script src="script.js"></script>
-    <script src="funciones.js"></script>
-    
-    <!-- Script para detectar errores -->
-    <script>
-        // Detector de errores para depuración
-        window.onerror = function(msg, url, lineNo, columnNo, error) {
-            console.error('Error detectado:', msg, 'en', url, 'línea', lineNo);
-            return false;
-        };
-    </script>
+    <br>
+    <br>
+    <table class="table" id="dbVacas-list"></table>
+
+    <script type="text/javascript" src="funciones.js"></script>
 </body>
 </html>
